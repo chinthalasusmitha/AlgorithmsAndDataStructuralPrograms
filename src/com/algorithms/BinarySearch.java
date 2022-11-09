@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        String arr[] = {"Pinky", "Rocky", "Chinnii", "Bunty", "Chintzu"};
+        String arr[] = {"pinky", "rocky", "chinnii", "bunty", "chintu"};
         Scanner sc = new Scanner(System.in);
         System.out.println("{Pinky,Rocky,Chin,Bunty,Chintz} " +
                 "\nchoose  a name from the above list");
         String searchString = sc.next();
         int result = binarySearch(arr, searchString);
+    if (result == -1)
+            System.out.println("Name not found in the list....");
+        else
+                System.out.println("Name found at the index " + result);
+}
 
-    }
 
     static int binarySearch(String[] arr, String searchString) {
         int low = 0, high = arr.length - 1;
